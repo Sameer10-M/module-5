@@ -1,148 +1,265 @@
-# EX-26-AREA-OF-RECTANGLE-USING- POINTER
-## AIM
-To write a C Program to find area of rectangle using pointer.
-
-## ALGORITHM
-1.	Start the program.
-2.	Read two numbers.
-3.	Calculate the area of rectangle using the formula area=(x)(*y)
-4.	Display the result.
-5.	Stop the program.
-
-## PROGRAM
-
-## OUTPUT
-		       	
+# NAME : SAMEER SHARIFF M
+# REG.NO : 212224220085
+# BRANCH : IT
 
 
-## RESULT
-Thus the program to find area of rectangle using pointer has been executed successfully
+
+
+# EX-21-POINTERS
+# AIM:
+Write a C program to convert a 23.65 into 25 using pointer
+
+## ALGORITHM:
+1.	Declare a double variable to hold the floating-point number (23.65).
+2.	Declare a pointer to double to point to the address of the variable.
+3.	Use the pointer to modify the value to 25.0.
+4.	Print the modified value.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    float num = 23.65;
+    float *ptr = &num;
+
+    *ptr = 25.0;
+
+    printf("Converted value: %.2f\n", num);
+
+    return 0;
+}
+```
+## OUTPUT:
+ 	
+![21](https://github.com/user-attachments/assets/ccb39aa4-9d72-4e79-ac9e-bafdde33df77)
+
+
+
+
+
+
+
+
+
+
+
+## RESULT:
+Thus the program to convert a 23.65 into 25 using pointer has been executed successfully.
  
  
 
 
-# EX-27-DYNAMIC-MEMORY-ALLOCATION
-## AIM
-To write a C Program to print 'WELCOME' using malloc() and free().
+# EX-22-FUNCTIONS AND STORAGE CLASS
 
-## ALGORITHM
-1.	Start the program.
-2.	Read a string variable.
-3.	Allocate memory using malloc().
-4.	Display the string.
-5.	Remove the allocated memory using free().
-6.	Stop the program.
+## AIM:
 
-## PROGRAM
+Write a C program to calculate the Product of first 12 natural numbers using Recursion
+
+## ALGORITHM:
+
+1.	Define a recursive function calculateProduct that takes an integer parameter n.
+2.	Return n multiplied by the result of the calculateProduct function called with n - 1.
+3.	Declare an integer variable n and an unsigned long long variable product.
+4.	Initialize n with the value 12 (for the first 12 natural numbers).
+5.	Call the calculateProduct function with n and store the result in the product variable.
+6.	Print the result, indicating it is the product of the first 12 natural numbers.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+long long product(int n) {
+    static long long result = 1;
+    if (n > 0) {
+        result *= n;
+        product(n - 1);
+    }
+    return result;
+}
+
+int main() {
+    int n = 12;
+    printf("Product of first %d natural numbers is: %lld\n", n, product(n));
+    return 0;
+}
+```
+
+
+## OUTPUT:
+
+![22](https://github.com/user-attachments/assets/a4771657-468a-47bf-80d7-4a13dce53dd0)
+
+
+           
+## RESULT:
+
+Thus the program has been executed successfully.
+ 
+ 
+
+
+# EX-23-ARRAYS AND ITS OPERATIONS
+
+## AIM:
+
+Write C Program to find Sum of each row of a Matrix
+
+## ALGORITHM:
+
+1.	Declare and initialize the matrix with the desired values.
+2.	Create a loop to iterate through each row of the matrix.
+3.	Inside the loop, calculate the sum of the elements in each row.
+4.	Print the sum for each row.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int rows, cols, i, j;
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+
+    int matrix[rows][cols];
+    printf("Enter the elements of the matrix:\n");
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    for (i = 0; i < rows; i++) {
+        int sum = 0;
+        for (j = 0; j < cols; j++) {
+            sum += matrix[i][j];
+        }
+        printf("Sum of row %d is: %d\n", i + 1, sum);
+    }
+
+    return 0;
+}
+```
+
 
 ## OUTPUT
 
+![23](https://github.com/user-attachments/assets/9d718812-786a-4670-9933-3a6f1d10fd12)
+
+ 
+ 
+
+ ## RESULT
+ To find the sum of each row of a matrix has successfully found...
+ 
+
+
+# EX-24-STRINGS
+
+## AIM:
+
+Write C program for the below pyramid string pattern. Enter a string: PROGRAM Enter number of rows: 5 P R O G R A M P R O G R A M P R O G R A M
+
+## ALGORITHM:
+
+1.	Input the number of rows for the pyramid (e.g., num_rows).
+2.	Initialize variables:i for the row count (starting from 1),j for the character count (starting from 1)
+3.	Start a loop for i from 1 to num_rows (for each row of the pyramid).
+4.	Calculate the midpoint position as midpoint = (2 * num_rows - 1) / 2.
+5.	End the program.
+
+## PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int rows, i, j, len;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
+
+    len = strlen(str);
+    for (i = 1; i <= rows; i++) {
+        for (j = 0; j < i; j++) {
+            printf("%c ", str[j % len]); 
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+ ## OUTPUT
+
+ ![24](https://github.com/user-attachments/assets/70eb51ef-a2de-4f2b-8985-7d58dd004661)
 
 
 ## RESULT
-Thus the program to print 'WELCOME' using malloc() and free() has been executed successfully
+
+Thus the C program to String process executed successfully
+ 
+
  
 .
 
 
 
-# EX-28-STUDENT-INFORMATION-USING-STRUCTURE
-
+# EX -25 –DISPLAYING ARRAYS USING POINTERS
 ## AIM
 
-To write a C Program to store the student information and display it using structure.
+Write a c program to read and display an array of any 6 integer elements using pointer
 
 ## ALGORITHM
-
-1.	Start the program.
-2.	Create a student structure with name, roll number and marks as members.
-3.	Using structure variable read the structure members and print them.
-4.	Stop the program.
-
-## PROGRAM
-
-
-## OUTPUT
-
-
-## RESULT
-
-Thus the program to store the student information and display it using structure has been executed successfully
- 
- 
-
-
-# EX-29-EMPLOYEE-STRUCTURE-SALARY-CALCULATION
-
-## AIM
-
-To write a C Program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure.
-
-## ALGORITHM
-
-1.	Start the program.
-2.	Create an employee structure with name, id and salary details as members.
-3.	Using structure variable read the structure members.
-4.	Calculate the gross salary and print the details.
-5.	Stop the program.
-
-## PROGRAM
-
-
- ## OUTPUT
-
- 
-
-## RESULT
-
-Thus the C program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure
- 
-
-
-
-
-# EX – 30 -STUDENTS MARK -TOTAL &AVERAGE USING STRUCURE
-
-## AIM
-Create a C program to calculate the total and average of student using structure.
-
-## ALGORITHM 
-
 Step 1: Start the program.
-Step 2: Define a struct student with:
-•	name: a character array (size 10) for the student's name (not used in the logic).
-•	rollno: an integer for the student's roll number (also unused).
-•	subject[5]: an array to store marks of 5 subjects.
-•	total: an integer to store total marks.
-Step 3: Declare an array s[2] of type struct student for 2 students. Also declare variables n, i, and j for input 
-             and iteration.
-Step 4: Input Loop (i = 0 to 1):
-•	Read an integer n (but it's not used later — possibly intended for roll number or placeholder).
-•	Loop j = 0 to 4:
-o	Read 5 subject marks into s[i].subject[j].
-Step 5: Total Marks Calculation Loop (i = 0 to 1):
-•	Initialize s[i].total to 0.
-•	Loop j = 0 to 4:
-o	Add each subject mark to s[i].total.
-Step 6: Override Total (Hardcoded):
-•	Set s[0].total = 374;
-•	Set s[1].total = 383;
-           This step overwrites the computed totals. It seems like testing or hardcoded totals — unnecessary if you’re 
-                 already calculating them.
-Step 7: Output Loop (i = 0 to 1):
-•	Print s[i].total for each student.
-Step 8: End the program.
+Step 2: Declare the following:
+•	Integer variable i for iteration.
+•	Integer variable n to store the number of elements.
+•	Integer array arr[10] to hold up to 10 elements.
+•	Integer pointer parr and initialize it to point to the array arr.
+Step 3: Read the value of n (number of elements) from the user.
+Step 4: Loop from i = 0 to i < n:
+•	Read an integer value and store it in the address parr + i using pointer arithmetic.
+Step 5: Loop from i = 0 to i < n:
+•	Print the element at *(parr + i) using pointer dereferencing.
+Step 6: End the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+    int arr[6];
+    int *ptr = arr;
+
+    printf("Enter 6 integers:\n");
+    for (int i = 0; i < 6; i++) {
+        scanf("%d", (ptr + i));
+    }
+
+    printf("The entered elements are:\n");
+    for (int i = 0; i < 6; i++) {
+        printf("%d ", *(ptr + i));
+    }
+
+    printf("\n");
+
+    return 0;
+}
+```
 
 ## OUTPUT
 
- 
+ ![25](https://github.com/user-attachments/assets/c96873dd-20ea-46fd-80cd-df3faf33613a)
+
 
 ## RESULT
 
-Thus the C program to calculate the total and average of student using structure has been executed successfully.
-	
+Thus the C program to read and display an array of any 6 integer elements using pointer has been executed
 
 
